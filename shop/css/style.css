@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    font-family: 'Helvetica';
+}
+#header{
+    background: rgba(248, 203, 0, 1);
+    height: 140px;
+    
+}
+
+h2, h3, .list, #number{
+    display: inline;
+}
+
+#header-list{
+    float: right;
+    margin-right: 62.5px;
+    margin-top: 4px;
+}
+#title{
+    margin-left: 63px;
+}
+
+#city{
+    margin-left: 50.5px;
+}
+#phone{
+    margin-left: 78.5px;
+}
+.list{
+    margin-right: 20px;
+}
+form{
+    margin-left: 33%;
+    margin-top: 48px;
+}
+#search{
+    width: 500px;
+    height: 40px;
+    border: 0px;
+    border-radius: 4px;
+}
+#search-button{
+    padding: 14px 0px 14px 8px;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(99, 100, 216, 1);
+    box-shadow: none;
+    border: 0px;
+    border-radius: 4px;
+}
+
+#number{
+    color: rgba(255, 255, 255, 1);
+    padding: 13px 10px 14.5px 8px;
+    background: rgba(57, 58, 177, 1);
+    border-radius: 4px;
+    
+
+}
+
+.list-button{
+    display: block;
+    background:  rgba(255, 255, 255, 1);
+    box-shadow: none;
+    border: 0px;
+    margin-top: 10px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+.list-item{
+    color: rgb(167, 166, 166);
+    margin-top: 10px;
+    list-style-type: none;
+  
+}
+.active{
+    color: rgba(248, 203, 0, 1);
+}
+#side-menu{
+    margin-left: 90px;
+    background: rgba(255, 255, 255, 1);
+    margin-top: -65px;
+    width: 300px;
+    box-shadow: -1px 1px 14px 0px rgba(150, 150, 150, 0.75);
+    border-radius: 4px;
+    padding-bottom: 50px;
+   
+}
+
+.cream-bar, .cream-title, .cream-showing{
+    display: inline;
+}
+
+.cream-showing{
+    margin-left: 700px;
+}
+
+
+#side-menu, #creams{
+    display: inline-block;
+}
+.popularity{
+    margin-left: 439px;
+}
+#creams div p{
+    display: inline;
+    font-size: 12px;
+    color: rgb(167, 166, 166);
+}
+
+.cream-bottom{
+    margin-left: 25px;
+}
+

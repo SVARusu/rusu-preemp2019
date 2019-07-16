@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/57392948a6.js"></script>
+    <title>Store</title>
+</head>
+<body>
+    <!-- header section -->
+    <section id="header">
+        <h2 id="title" style="color: white;">(not so) Amazing store</h2>
+        
+        </i><h3 id="city">My city: Los Angele</h3><i class="fas fa-map-marker-alt"></i>
+        <h3 id="phone">Phone: 43534534</h3><i class="fas fa-phone"></i>
+        
+        <ul id="header-list">
+            <li class="list"><a href="#">Shipping</a></li>
+            <li class="list"><a href="#">Blog</a></li>
+            <li class="list"><a href="#">Company</a></li>
+            <li class="list"><a href="#">My Account</a></li>
+        </ul>
+        <form action="">
+            <input id="search" type="text" placeholder="Search products by SKU or name">
+            <button id="search-button" value="My cart">
+                <i class="fas fa-shopping-cart"></i> My cart
+                <span id="number">12</span>
+            </button> 
+        </form>
+    </section>
+    <!-- the rest -->
+    <section>
+        <div>
+            <div id="side-menu">
+                <h5>All categories</h5>
+                <button onclick="myFunction()" class="list-button">FACE</button>
+                <ul id="myDIV">
+                    <li class="list-item active">Creams & Gel</li>
+                    <li class="list-item">Patches</li>
+                    <li class="list-item">Emulsions</li>
+                    <li class="list-item">Toners</li>
+                    <li class="list-item">Face cleansing</li>
+                    <li class="list-item">Makeup removal</li>
+                    <li class="list-item">Scrubs</li>
+                    <li class="list-item">Peeling</li>
+                    <li class="list-item">Masks</li>
+                </ul>
+                <button class="list-button">BODY</button>
+                <button class="list-button">FOOT</button>
+                <button class="list-button">HANDS</button>
+                <button class="list-button">HAIR</button>
+                <button class="list-button">MAKEUP</button>
+            </div>
+    
+            <div id="creams">
+                <div style="margin-left: 50px;">
+                    <div class="cream-title"><h2>Creams & gels</h2></div>
+                    <div class="cream-showing">
+                        <p class="cream-bar">Showing 60 of 323</p>
+                        <button class="cream-bar"><i class="fas fa-angle-left"></i></button>
+                        <button class="cream-bar"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <div style="margin-left: 50px;">
+                    <p>BRAND: <span style="color: rgba(99, 100, 216, 1);">ALL BRANDS</span></p>
+                    <p class="cream-bottom">SKIN TYPE: <span style="color: rgba(99, 100, 216, 1);">FOR ALL SKIN TYPES</span></p>
+                    <p class="cream-bottom">AGE: <span style="color: rgba(99, 100, 216, 1);">30+</span></p>
+                    <p class="popularity">SORT BY: <span style="color: rgba(99, 100, 216, 1);">BY POPULARITY</span></p>
+                </div>
+                <hr>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+            x.style.display = "block";
+            } else {
+            x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
