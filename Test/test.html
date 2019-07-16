@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+    <meta name="author" content="Alexandru Rusu">
+</head>
+<body>
+    
+    <header style="background: orange;">
+        <nav>
+            <ul>
+                <li><a href="anotherPage.html">Click me</a></li>
+                <li><a href="thridPage.html" target="_blank">Dont click me</a></li>
+                <li><a href="#">Its the first link</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Summary</h1>
+        <p>Isn't this fun?</p>
+        <img src="6sdMeys.png" alt="thor meme">
+
+        <ol>
+            <li class="participantList">Trainers</li>
+            <li class="participantList">Students</li>
+            <li class="participantList" id="specialItem">Coaches</li>
+        </ol>
+    </section>
+
+    <table border="1">
+        <thead>
+            <th>Name of activity</th>
+            <th>Description</th>
+            <th>Duration</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Theoretical presetation</td>
+                <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, non.</td>
+                <td>&tilde; 3h</td>
+            </tr>
+            <tr>
+                <td>Practice what you learned</td>
+                <td>You will receive <span style="color: deeppink;">assignments</span></td>
+                <td>&tilde; 5h</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="background-color: lightblue;">
+        <h3>Resources</h3>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius!</p>
+        <ul>
+            <li><a href="#">Lorem, ipsum.</a></li>
+            <li><a href="#">Lorem, ipsum dolor</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet consectetur</a></li>
+        </ul>
+    </div>
+    <h2 id="demo"></h2>
+    <footer>
+        <div>
+            <h4>Weather this week</h4>
+            <dl>
+                <dt>Monday</dt>
+                <dd>Sunny</dd>
+                <dt>Tuesday</dt>
+                <dd>Crying</dd>
+                <dt>Wednesday</dt>
+                <dd>More crying</dd>
+            </dl>
+        </div>
+        <article style="text-align: center;">July 15, 2019</article>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("demo").innerHTML = "Hello HTML, I am Javascript!";
+    </script>
+</body>
+</html>

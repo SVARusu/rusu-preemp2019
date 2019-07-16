@@ -1,0 +1,55 @@
+
+
+table, th, td{
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 50px;
+}
+table{
+    width: 50%;
+}
+
+footer{
+    margin-top: 23%;
+    border-top: 1px solid black;
+}
+a, li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header{
+
+    border: 1px solid black;
+}
+
+/* img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+li{
+    display: inline;
+    border-right: 1px solid black;
+}
+.link{
+    margin-right: 5px;
+}
+
+.link:hover{
+    color: red;
+}
+
+.content {
+    display: flex;
+}
+.content img {
+    margin-right: 10px;
+    display: block;
+}
+
+
+.content p {margin-top:  100px;}
+
+  
