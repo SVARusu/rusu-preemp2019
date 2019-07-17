@@ -11,17 +11,20 @@
 <body>
     <!-- header section -->
     <section id="header">
-        <h2 id="title" style="color: white;">(not so) Amazing store</h2>
+        <div class="upper-header">
+            <h2 id="title" style="color: white;">(not so) Amazing store</h2>
         
-        </i><h3 id="city">My city: Los Angele</h3><i class="fas fa-map-marker-alt"></i>
-        <h3 id="phone">Phone: 43534534</h3><i class="fas fa-phone"></i>
+            <i class="fas fa-map-marker-alt"></i><h3 id="city">My city: Los Angele</h3>
+            <h3 id="phone">Phone: 43534534</h3><i class="fas fa-phone"></i>
+            
+            <ul id="header-list">
+                <li class="list"><a href="#">Shipping</a></li>
+                <li class="list"><a href="#">Blog</a></li>
+                <li class="list"><a href="#">Company</a></li>
+                <li class="list"><a href="#">My Account</a></li>
+            </ul>
+        </div>
         
-        <ul id="header-list">
-            <li class="list"><a href="#">Shipping</a></li>
-            <li class="list"><a href="#">Blog</a></li>
-            <li class="list"><a href="#">Company</a></li>
-            <li class="list"><a href="#">My Account</a></li>
-        </ul>
         <form action="">
             <input id="search" type="text" placeholder="Search products by SKU or name">
             <button id="search-button" value="My cart">
@@ -31,8 +34,8 @@
         </form>
     </section>
     <!-- the rest -->
-    <section>
-        <div>
+    <section >
+        <div class="container">
             <div id="side-menu">
                 <h5>All categories</h5>
                 <button onclick="myFunction()" class="list-button">FACE</button>
@@ -94,7 +97,7 @@
                             <p>$4.00</p>
                         </div>
                     </div>
-                   <!--  <div class="column">
+                    <div class="column">
                         <div class="cream-image">
                             <img src="images/2.jpg" alt="" srcset="">
                             <p>Missha all around safe block sebum zero sun</p>
@@ -114,13 +117,13 @@
                             <img src="images/5.jpg" alt="" srcset="">
                             <p>Missha all around safe block sebum zero sun</p>
                             <p>$4.00</p>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
+    <!-- <div class="clearfix"></div> -->
 
     <script>
         function myFunction() {

@@ -2,16 +2,28 @@
     margin: 0;
     font-family: 'Helvetica';
 }
+
+/* ****************************************** */
+/* HEADER */
 #header{
     background: rgba(248, 203, 0, 1);
-    height: 140px;
+    height: 140px; 
+       
+}
+.upper-header{
     
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-h2, h3, .list, #number{
+/* h2, h3, .list, #number{
     display: inline;
 }
-
+ */
+ .list{
+     display: inline;
+ }
 #header-list{
     float: right;
     margin-right: 62.5px;
@@ -57,6 +69,8 @@ form{
     
 
 }
+/* ************************************ */
+/* SIDEMENU */
 
 .list-button{
     display: block;
@@ -86,7 +100,13 @@ form{
     padding-bottom: 50px;
    
 }
+/* #side-menu{
+    float: left;
+} */
 
+
+/* *********************************** */
+/* Image section */
 .cream-bar, .cream-title, .cream-showing{
     display: inline;
 }
@@ -96,9 +116,9 @@ form{
 }
 
 
-#side-menu, #creams{
+/* #side-menu, #creams{
     display: inline-block;
-}
+} */
 .popularity{
     margin-left: 439px;
 }
@@ -137,3 +157,15 @@ form{
     margin-top: 50px;
 }
 
+/* #creams{
+    float: right;
+}
+.clearfix{
+    clear: both;
+} */
+
+.container{
+    
+    display: flex;
+    flex-direction: row;
+}
