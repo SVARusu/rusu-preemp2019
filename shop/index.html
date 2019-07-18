@@ -6,37 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/57392948a6.js"></script>
-    <title>Store</title>
+    <title>Document</title>
 </head>
 <body>
-    <section class="different-container">
-        <!-- header section -->
-        <section id="header">
-            <div class="upper-header">
-                <p id="title" style="color: white; font-size: 20px;">(not so) Amazing store</p>
-                <p id="city" ><i class="fas fa-map-marker-alt"></i> My city: Los Angele</p>
-                <p id="phone"><i class="fas fa-phone"></i> Phone: 43534534</p>
-                
-                <ul id="header-list">
-                    <li class="list"><a href="#">Shipping</a></li>
-                    <li class="list"><a href="#">Blog</a></li>
-                    <li class="list"><a href="#">Company</a></li>
-                    <li class="list"><a href="#">My Account</a></li>
-                </ul>
-            </div>
-            
-            <form action="" class="lower-header">
-                <input id="search" type="text" placeholder="Search products by SKU or name">
-                <button id="search-button" value="My cart">
-                    <i class="fas fa-shopping-cart"></i> My cart
-                    <span id="number">12</span>
-                </button> 
-            </form>
-        </section>
-
-        <!-- the rest -->
-        <section >
-            <div class="container">
+    <div>
+        <header>
+            <nav>
+                <div class="left-nav">
+                    <h1>Amazing shop</h1>
+                </div>
+                <div class="right-nav">
+                    <div class="upper-right-nav">
+                        <p id="city" ><i class="fas fa-map-marker-alt"></i> My city: Los Angele</p>
+                        <p id="phone"><i class="fas fa-phone"></i> Phone: 43534534</p>
+                        <ul class="header-list">
+                            <li class="list"><a href="#">Shipping</a></li>
+                            <li class="list"><a href="#">Blog</a></li>
+                            <li class="list"><a href="#">Company</a></li>
+                            <li class="list"><a href="#">My Account</a></li>
+                        </ul>
+                    </div>
+                    <div class="lower-right-nav">
+                        <form action="" class="lower-header">
+                            <!-- <i class="fas fa-search icon"></i> -->
+                            <input class="search" type="text" placeholder="Search products by SKU or name">
+                            <!-- <button class="search-button" value="My cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>My cart</span> 
+                                <p class="number">12</p>
+                            </button>  -->
+                        </form>
+                        <a class="cart-button" value="My cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            My cart
+                            <span class="number">12</span>
+                        </a> 
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="left-content">
                 <div id="side-menu">
                     <div>
                         <h5>All categories</h5>
@@ -63,10 +73,11 @@
                         <img src="images/1.jpg" alt="" srcset="">
                     </div>
                 </div>
-                
-        
-                <div id="creams">
-                    <div class="more-creams-upper" style="margin-left: 50px;">
+
+            </div>
+            <div class="right-content">
+                <div class="upper-right-content">
+                    <div class="more-creams-upper">
                         <div class="cream-title"><h2>Creams & gels</h2></div>
                         <div class="cream-showing">
                             <p class="cream-bar cream-bar-text">Showing 60 of 323</p>
@@ -74,65 +85,66 @@
                             <button class="cream-bar cream-bar-button"><i class="fas fa-angle-right"></i></button>
                         </div>
                     </div>
-                    <div class="more-creams" style="margin-left: 50px;">
-                        <p>BRAND: <span style="color: rgba(99, 100, 216, 1);">ALL BRANDS</span></p>
-                        <p class="cream-bottom">SKIN TYPE: <span style="color: rgba(99, 100, 216, 1);">FOR ALL SKIN TYPES</span></p>
-                        <p class="cream-bottom">AGE: <span style="color: rgba(99, 100, 216, 1);">30+</span></p>
-                        <p class="popularity">SORT BY: <span style="color: rgba(99, 100, 216, 1);">BY POPULARITY</span></p>
+                    <div class="more-creams-lower">
+                        <div class="brand">
+                            <p>BRAND: <span style="color: rgba(99, 100, 216, 1);">ALL BRANDS</span></p>
+                            <p class="cream-bottom">SKIN TYPE: <span style="color: rgba(99, 100, 216, 1);">FOR ALL SKIN TYPES</span></p>
+                            <p class="cream-bottom">AGE: <span style="color: rgba(99, 100, 216, 1);">30+</span></p>
+                        </div>
+                        <div class="popularity">
+                            <p>SORT BY: <span style="color: rgba(99, 100, 216, 1);">BY POPULARITY</span></p>
+                        </div>
+                        
                     </div>
                     <hr>
-                    
-                    <div class="row" id="images" style="max-width: 1050px;">
-                    <!--  <div class="column"> -->
-                            <div class="cream-image">
-                                <img src="images/2.jpg" alt="" srcset="">
-                                <p>Missha all around safe block sebum zero sun</p>
-                                <p>$4.00</p>
-                            </div>
-                            <div class="cream-image">
-                                <img src="images/3.jpg" alt="" srcset="">
-                                <p>Missha all around safe block sebum zero sun</p>
-                                <p>$4.00</p>
-                            </div>
-                            <div class="cream-image">
-                                <img src="images/4.jpg" alt="" srcset="">
-                                <p>Missha all around safe block sebum zero sun</p>
-                                <p>$4.00</p>
-                            </div>
-                            <div class="cream-image"> 
-                                <img src="images/5.jpg" alt="" srcset="">
-                                <p>Missha all around safe block sebum zero sun</p>
-                                <p>$4.00</p>
-                            </div>
-                        <!-- </div> -->
-                        <!-- <div class="column"> -->
-                            <div class="cream-image">
-                                <img src="images/2.jpg" alt="" srcset="">
-                                <p>Missha all around safe block sebum zero sun</p>
-                                <p>$4.00</p>
-                            </div>
-                            <div class="cream-image">
-                                <img src="images/3.jpg" alt="" srcset="">
-                                <p>Missha all around safe block sebum zero sun</p>
-                                <p>$4.00</p>
-                            </div>
-                            <div class="cream-image">
-                                <img src="images/4.jpg" alt="" srcset="">
-                                <p>Missha all around safe block sebum zero sun</p>
-                                <p>$4.00</p>
-                            </div>
-                            <div class="cream-image"> 
-                                <img src="images/5.jpg" alt="" srcset="">
-                                <p>Missha all around safe block sebum zero sun</p>
-                                <p>$4.00</p>
-                            </div>
-                        <!-- </div> -->
+                </div>
+                <div class="lower-right-content">
+                    <div class="cream-image">
+                        <img src="images/2.jpg" alt="" srcset="">
+                        <p>Missha all around safe block sebum zero sun</p>
+                        <p>$4.00</p>
+                    </div>
+                    <div class="cream-image">
+                        <img src="images/3.jpg" alt="" srcset="">
+                        <p>Missha all around safe block sebum zero sun</p>
+                        <p>$4.00</p>
+                    </div>
+                    <div class="cream-image">
+                        <img src="images/4.jpg" alt="" srcset="">
+                        <p>Missha all around safe block sebum zero sun</p>
+                        <p>$4.00</p>
+                    </div>
+                    <div class="cream-image"> 
+                        <img src="images/5.jpg" alt="" srcset="">
+                        <p>Missha all around safe block sebum zero sun</p>
+                        <p>$4.00</p>
+                    </div>
+                    <div class="cream-image">
+                        <img src="images/2.jpg" alt="" srcset="">
+                        <p>Missha all around safe block sebum zero sun</p>
+                        <p>$4.00</p>
+                    </div>
+                    <div class="cream-image">
+                        <img src="images/3.jpg" alt="" srcset="">
+                        <p>Missha all around safe block sebum zero sun</p>
+                        <p>$4.00</p>
+                    </div>
+                    <div class="cream-image">
+                        <img src="images/4.jpg" alt="" srcset="">
+                        <p>Missha all around safe block sebum zero sun</p>
+                        <p>$4.00</p>
+                    </div>
+                    <div class="cream-image"> 
+                        <img src="images/5.jpg" alt="" srcset="">
+                        <p>Missha all around safe block sebum zero sun</p>
+                        <p>$4.00</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- <div class="clearfix"></div> -->
-    </section>
+        </div>
+    </div>
+
+
     <script>
         function myFunction() {
             var x = document.getElementById("myDIV");
@@ -143,5 +155,6 @@
             }
         }
     </script>
+    
 </body>
 </html>
