@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div>
+        <span style="padding: 10px; background: green;" id="click-me">This is so cool</span>
+        <span style="padding: 10px; background: red" id="remove-click-me">Delete the image</span>
+        <span style="padding: 10px; background: blue" id="another-click-me">This is cool too</span>
+        <div id="blue-box" style="margin-top: 20px; height: 400px; width: 400px;">
+            <img src="6sdMeys.png" style="display: none; margin-top: 10px;" alt="" id="display-me">
+        </div>
+        
+    </div>
+
+    <script>
+
+        /* exercise 2 */
+        var body = document.querySelector('body');
+        body.addEventListener("click", function(event){
+            console.log(event.type + ' on ' + event.target);
+            alert("something was clicked");
+            
+        });
+
+
+        var greenButton = document.getElementById("click-me");
+        greenButton.addEventListener("click", clickButton); 
+
+        /* exercise 3 */
+        var blueButton = document.getElementById("another-click-me");
+        blueButton.addEventListener("click", function(){
+            greenButton.click()
+        });
+        
+        /* exercise 4 */
+        var blueBox = document.getElementById("blue-box");
+        var event = new Event('build');
+
+        blueBox.addEventListener('build', function(event){
+            blueBox.style.backgroundColor = "blue";
+        }, false);
+
+
+
+        function clickButton(){
+             var img = document.querySelector("#display-me");
+            if(img === null){
+              
+                alert("i cant find any images");
+            }else{
+                img.style.display = "block";
+            } 
+           
+        }
+
+        var img = document.querySelector("#display-me");
+        img.addEventListener("click", eventHandler);
+        function eventHandler(){
+            img.style.display = "none";
+
+            /* rest of exercise 4 */
+            blueBox.dispatchEvent(event);
+            
+        }
+        var redButton = document.querySelector("#remove-click-me");
+        redButton.addEventListener("click", deleteImage);
+        
+        
+        
+        function deleteImage(){
+            var img = document.querySelector("#display-me");
+            if(img !== null){
+                img.parentElement.removeChild(img);
+                //document.querySelector("#click-me").style.display = 'none';
+                img.removeEventListener("click", eventHandler);
+            }
+        }
+
+        
+       
+    </script>
+</body>
+</html>

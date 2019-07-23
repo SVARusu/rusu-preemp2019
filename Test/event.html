@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <!--  <div>
+        <a href="#" id="google-link">click me</a>
+    </div> -->
+
+    <!-- <div id="page" style="padding: 20px; border: 1px solid blue;">
+        <div id="container" style="padding: 20px; background: green;"></div>
+    </div> -->
+
+    <div>
+        <span style="padding: 10px; background: green;" id="click-me">This is so cool</span>
+        <img src="6sdMeys.png" style="display: none; margin-top: 10px;" alt="" id="display-me">
+    </div>
+
+    <script>
+        /* window.onload = function(){
+            
+            alert("this page is loaded");
+
+            var link = document.getElementById("google-link");
+            link.onclick = function(){
+                console.log("something");
+            }
+        }
+        function clickedAgain(){
+            console.log("clicked");
+        }
+        window.onload = function(){
+            console.log("second log");
+        } */
+
+        //var link = document.getElementById("google-link");
+        /* link.addEventListener("mouseenter", function(e){
+            console.log("Hover on link", e.target.text);
+        });
+
+        link.addEventListener("mouseenter", function(){
+            console.log("Hover once");
+        }, {once:true}) */
+
+        // function eventHandler(e){
+        //     console.log(e.type + 'on link', event.target.text);
+        // }
+
+        //link.addEventListener("mouseenter", eventHandler, {once:true});
+        //link.addEventListener("mouseenter", eventHandler);
+        //link.removeEventListener("mousedown", eventHandler, {once:true});
+        //link.removeEventListener("mouseenter", eventHandler);
+
+        //link.addEventListener("mousedown", eventHandler, {passive:true});
+
+        // link.removeEventListener("mousedown", eventHandler, {passive:true});
+        // link.removeEventListener("mousedown", eventHandler, {capture:false});
+        // link.removeEventListener("mousedown", eventHandler, {capture:true});
+        // link.removeEventListener("mousedown", eventHandler, {passive:false});
+        // link.removeEventListener("mousedown", eventHandler, false);
+        // link.removeEventListener("mousedown", eventHandler, true);
+
+        // function eventHandler(e){
+        //     console.log(e.type + 'on', e.target.nodeName);
+        // }
+
+        // window.addEventListener("click", function(){
+        //     document.documentElement.requestFullscreen();
+        // });
+        // document.addEventListener("fullscreenchange", eventHandler);
+        // link.addEventListener("mouseout", eventHandler);
+
+        // var event = new Event("build");
+
+        // window.addEventListener("build", function(event){
+        //     console.log(event.type);
+        // });
+
+        // window.dispatchEvent(event);
+
+        //BUBBLIMG
+        // var container = document.getElementById("container");
+        // var page = document.getElementById("page");
+        // function eventHandler(event){
+        //     console.log(event.type + 'on' + event.currentTarget.id);
+        // }
+        // page.addEventListener("click", eventHandler);
+        // container.addEventListener("click", eventHandler);
+
+
+        //CAPTURING
+        // var container = document.getElementById("container");
+        // var page = document.getElementById("page");
+        // function eventHandler(event){
+        //     console.log(event.type + 'on' + event.currentTarget.id);
+        // }
+        // page.addEventListener("click", eventHandler, true);
+        // container.addEventListener("click", eventHandler);
+
+
+        // function addEventListener(event){
+        //     console.log(event.type, event.target);
+        //     event.stopPropagation();
+            
+        // }
+
+
+        document.getElementById("click-me").addEventListener("click", function(){
+            var img = document.getElementById("display-me");
+            if (img.style.display === "none") {
+                img.style.display = "block";
+            } else {
+                img.style.display = "none";
+            }
+        });
+
+    </script>
+</body>
+</html>
