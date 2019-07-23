@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+        <span style="padding: 10px; background: green;" id="click-me">This is so cool</span>
+        <img src="6sdMeys.png" style="display: none; margin-top: 10px;" alt="" id="display-me">
+    </div>
+
+    <script>
+        document.getElementById("click-me").addEventListener("click", function(){
+            var img = document.getElementById("display-me");
+            if (img.style.display === "none") {
+                img.style.display = "block";
+            } else {
+                img.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
