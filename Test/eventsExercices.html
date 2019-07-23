@@ -11,31 +11,46 @@
         <span style="padding: 10px; background: green;" id="click-me">This is so cool</span>
         <span style="padding: 10px; background: red" id="remove-click-me">Delete the image</span>
         <span style="padding: 10px; background: blue" id="another-click-me">This is cool too</span>
-        <img src="6sdMeys.png" style="display: none; margin-top: 10px;" alt="" id="display-me">
+        <div id="blue-box" style="margin-top: 20px; height: 400px; width: 400px;">
+            <img src="6sdMeys.png" style="display: none; margin-top: 10px;" alt="" id="display-me">
+        </div>
+        
     </div>
 
     <script>
+
+        /* exercise 2 */
+        var body = document.querySelector('body');
+        body.addEventListener("click", function(event){
+            console.log(event.type + ' on ' + event.target);
+            alert("something was clicked");
+            
+        });
+
+
         var greenButton = document.getElementById("click-me");
-        var blueButton = document.getElementById("another-click-me");
         greenButton.addEventListener("click", clickButton); 
+        
+        /* exercise 3 */
+        var blueButton = document.getElementById("another-click-me");
         blueButton.addEventListener("click", clickButton);
         
-        
+        /* exercise 4 */
+        var blueBox = document.getElementById("blue-box");
+        var event = new Event('build');
+
+        blueBox.addEventListener('build', function(event){
+            blueBox.style.backgroundColor = "blue";
+        }, false);
+
+
+
         function clickButton(){
             var img = document.querySelector("#display-me");
-          /*   if(document.body.contains(img)){
-                alert("exists");
-            } */
             if(img === null){
               
                 alert("i cant find any images");
             }else{
-                //alert("i cant find any images");
-                // if (img.style.display === "none") {
-                // img.style.display = "block";
-                // } else {
-                //     img.style.display = "none";
-                // }
                 img.style.display = "block";
             }
            
@@ -45,6 +60,10 @@
         img.addEventListener("click", eventHandler);
         function eventHandler(){
             img.style.display = "none";
+
+            /* rest of exercise 4 */
+            blueBox.dispatchEvent(event);
+            
         }
         var redButton = document.querySelector("#remove-click-me");
         redButton.addEventListener("click", deleteImage);
@@ -60,12 +79,8 @@
             }
         }
 
-        var body = document.querySelector('body');
-        body.addEventListener("click", function(event){
-            console.log(event.type + ' on ' + event.target);
-            alert("something was clicked");
-            
-        });
+        
+       
     </script>
 </body>
 </html>
