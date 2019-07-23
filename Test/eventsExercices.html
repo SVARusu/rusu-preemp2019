@@ -30,10 +30,12 @@
 
         var greenButton = document.getElementById("click-me");
         greenButton.addEventListener("click", clickButton); 
-        
+
         /* exercise 3 */
         var blueButton = document.getElementById("another-click-me");
-        blueButton.addEventListener("click", clickButton);
+        blueButton.addEventListener("click", function(){
+            greenButton.click()
+        });
         
         /* exercise 4 */
         var blueBox = document.getElementById("blue-box");
@@ -46,13 +48,13 @@
 
 
         function clickButton(){
-            var img = document.querySelector("#display-me");
+             var img = document.querySelector("#display-me");
             if(img === null){
               
                 alert("i cant find any images");
             }else{
                 img.style.display = "block";
-            }
+            } 
            
         }
 
