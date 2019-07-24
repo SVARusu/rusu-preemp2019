@@ -225,7 +225,7 @@ nav .upper-right-nav{
     margin-top: 25px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -237,7 +237,13 @@ nav .upper-right-nav{
     height: 400px;
     margin-bottom: 50px;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     
+}
+.cream-image .image-price, .modal-price{
+    color: orange;
 }
 .cream-image:hover{
     opacity: 0.7;
