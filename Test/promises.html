@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  var promise = new Promise(function(resolve, reject){
+            resolve(1);
+        });
+        promise.then(
+            function(val){
+                console.log(val);
+                return val + 2;
+            }
+        ).then(function(val){
+            console.log(val);
+            
+        }); */
+
+        const getFirstUserData = async () => {
+            const url = await fetch('https://my-json-server.typicode.com/typicode/demo/comments');
+            const response =  await url.json();
+            const comments = response[0];
+            const comment = await fetch(`https://my-json-server.typicode.com/typicode/demo/comments/${comments.id}`);
+            const commentResponse = await comment.json();
+            return commentResponse;
+        }
+        //getFirstUserData();
+        console.log(getFirstUserData());
+    </script>
+</body>
+</html>

@@ -136,44 +136,44 @@
                 </div>
                 <div class="lower-right-content">
                     <div class="cream-image">
-                        <img src="images/2.jpg" alt="" srcset="" id="myImg">
+                        <img src="images/2.jpg" alt="" srcset="" class="myImg">
                         <p>Missha all around safe block sebum zero sun</p>
-                        <p>$4.00</p>
+                        <p class="image-price">$4.00</p>
                     </div>
                     <div class="cream-image">
-                        <img src="images/3.jpg" alt="" srcset="">
+                        <img src="images/3.jpg" alt="" srcset="" class="myImg">
                         <p>Missha all around safe block sebum zero sun</p>
-                        <p>$4.00</p>
+                        <p class="image-price">$4.00</p>
                     </div>
                     <div class="cream-image">
-                        <img src="images/4.jpg" alt="" srcset="">
+                        <img src="images/4.jpg" alt="" srcset="" class="myImg">
                         <p>Missha all around safe block sebum zero sun</p>
-                        <p>$4.00</p>
+                        <p class="image-price">$4.00</p>
                     </div>
                     <div class="cream-image"> 
-                        <img src="images/5.jpg" alt="" srcset="">
+                        <img src="images/5.jpg" alt="" srcset="" class="myImg">
                         <p>Missha all around safe block sebum zero sun</p>
-                        <p>$4.00</p>
+                        <p class="image-price">$4.00</p>
                     </div>
                     <div class="cream-image">
-                        <img src="images/2.jpg" alt="" srcset="" >
+                        <img src="images/6.png" alt="" srcset="" class="myImg">
                         <p>Missha all around safe block sebum zero sun</p>
-                        <p>$4.00</p>
+                        <p class="image-price">$4.00</p>
                     </div>
                     <div class="cream-image">
-                        <img src="images/3.jpg" alt="" srcset="" >
+                        <img src="images/7.jpg" alt="" srcset="" class="myImg">
                         <p>Missha all around safe block sebum zero sun</p>
-                        <p>$4.00</p>
+                        <p class="image-price">$4.00</p>
                     </div>
                     <div class="cream-image">
-                        <img src="images/4.jpg" alt="" srcset="" >
+                        <img src="images/8.jpg" alt="" srcset="" class="myImg">
                         <p>Missha all around safe block sebum zero sun</p>
-                        <p>$4.00</p>
+                        <p class="image-price">$4.00</p>
                     </div>
                     <div class="cream-image"> 
-                        <img src="images/5.jpg" alt="" srcset="" >
+                        <img src="images/9.jpg" alt="" srcset="" class="myImg">
                         <p>Missha all around safe block sebum zero sun</p>
-                        <p>$4.00</p>
+                        <p class="image-price">$4.00</p>
                     </div>
                 </div>
             </div>
@@ -184,19 +184,34 @@
 
         <!-- The Close Button -->
         <div class="modal-box">
-            <span class="close">&times;</span>
+            
             <div class="right-modal">
                     <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
+                <div class="modal-content">
+                    <img id="img01">
+                </div>
+                
             </div>
             <div class="left-modal">
-                <p class="modal-title"></p>
-                <p class="modal-price"></p>
-                <button class="modal-button">
-                    <p>Add to cart</p>
-                </button>
-                <p class="modal-description"></p>
+                <div style="margin-left: auto;">
+                    <span class="close">&times;</span>
+                </div>
+                <div class="right-modal-content">
+                    <div class="close-button">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                        </div>
+                        
+                    </div>
+                    <p class="modal-title"></p>
+                    <p class="modal-price"></p>
+                    <button class="modal-button">
+                        <p>Add to cart</p>
+                    </button>
+                    <p class="modal-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, dolor?</p>
+                </div>
             </div>
+                
         </div>
         
        
@@ -221,13 +236,21 @@
         var modal = document.getElementById("myModal");
 
         // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById("myImg");
+        var img = document.getElementsByClassName("myImg");
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
-        img.onclick = function(){
+        for(var i = 0; i < img.length; i++){
+            img[i].onclick = displayModal;
+        }
+        function displayModal(){
+            var title = document.querySelector(".modal-title");
             modal.style.display = "block";
             modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+          //  captionText.innerHTML = this.alt;
+            title = this.parentElement.children[1].textContent;
+            price = this.parentElement.children[2].textContent;
+            document.querySelector(".modal-title").innerHTML = title;
+            document.querySelector(".modal-price").innerHTML = price;
         }
 
         // Get the <span> element that closes the modal
