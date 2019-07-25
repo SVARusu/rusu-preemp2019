@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+/*     
+    function outerFunction(){
+        
+        var increment = 0;
+        function innerFunction(){
+            
+            increment++;
+            var count = 1;
+            count++;
+  
+        }
+        innerFunction();
+        innerFunction();
+        innerFunction();
+
+        console.log("count: " + count);
+        console.log("increment: " + increment);
+    }
+    outerFunction(); */
+
+        /* console.log(a);
+        var a = 1; */
+        /* function add (x){
+            return function(y){
+                return x + y;
+            }
+        }
+
+        console.log(add(5)(4)); */
+
+        // var arr = [
+        //     {
+        //         name: "name1",
+        //         age: 25
+        //     },
+        //     {
+        //         name: "name2",
+        //         age: 35
+        //     },
+        //     {
+        //         name: "name3",
+        //         age: 17
+        //     },
+        //     {
+        //         name: "name4",
+        //         age: 67
+        //     },
+        //     {
+        //         name: "name5",
+        //         age: 2
+        //     }
+        // ]
+        
+
+        /* function calcAge(arr){
+            var age = 0
+            for(var i = 0; i < arr.length; i++){
+                age = age + arr[i].age;
+                
+            }
+            console.log("varsta medie: " + age/arr.length);
+        }
+        
+        calcAge(arr); */
+        // var ages = 0;
+        // var media = 0;
+        // arr.forEach(function(person){
+        //     ages += person.age;
+        // });
+        // media = ages/arr.length;
+        // console.log(media);
+    
+        // var arr = [
+        //     {
+        //         firstName: "France",
+        //         lastName: "George",
+        //         fullName: function(){
+        //             return this.firstName + " " + this.lastName;
+        //         }
+        //     },
+        //     {
+        //         firstName: "Mike",
+        //         lastName: "Jefferson",
+        //         fullName: function(){
+        //             return this.firstName + " " + this.lastName;
+        //         }
+        //     },
+        //     {
+        //         firstName: "Holy",
+        //         lastName: "Hope",
+        //         fullName: function(){
+        //             return this.firstName + " " + this.lastName;
+        //         }
+        //     },
+        // ]
+        // arr.forEach(function(person){
+        //     console.log(person.fullName());
+        // });
+        //console.log(arr[1].fullName());
+
+        let calculator = {
+            num1: 0,
+            num2: 0,
+            read: function(){
+                this.num1 = parseInt(prompt("enter the first number"));
+                this.num2 = parseInt(prompt("enter the second number"));
+                //console.log(typeof(this.num1));
+            },
+            sum: function(){
+                return 'The sum is: ' + (this.num1 + this.num2);
+            },
+            mul: function(){
+                return "The multiplication is: " + this.num1 * this.num2;
+                
+            }
+        }
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+    </script>
+</body>
+</html>
