@@ -1,0 +1,27 @@
+.navigation {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.menu-item {
+    list-style-type: none;
+    margin-left: 1.5rem;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+.menu-item a:hover {
+    color: #fff
+}
