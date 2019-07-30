@@ -1,0 +1,45 @@
+/* left content */
+.list-button{
+    display: block;
+    background:  rgba(255, 255, 255, 1);
+    box-shadow: none;
+    border: 0px;
+    margin-top: 10px;
+    font-weight: 600;
+    margin-left: 25px;
+    padding: 0;
+}
+
+.list-item{
+    color: rgb(167, 166, 166);
+    margin-top: 10px;
+    list-style-type: none;
+  
+}
+.active{
+    color: rgba(248, 203, 0, 1);
+}
+
+#side-menu{
+    
+    background: rgba(255, 255, 255, 1);
+    margin-top: -55px;
+    width: 90%;
+    box-shadow: -1px 1px 14px 0px rgba(150, 150, 150, 0.75);
+    border-radius: 4px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+.side-cream{
+    widows: 300px;
+    margin-top: 300px;
+}
+
+.side-cream img{
+    width: 100%;
+    border-radius: 4px;
+}

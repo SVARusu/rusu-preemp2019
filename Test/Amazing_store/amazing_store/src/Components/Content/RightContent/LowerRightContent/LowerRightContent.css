@@ -1,0 +1,40 @@
+.lower-right-content{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.cream-image{
+    border-radius: 4px;
+    width: 22%;
+    box-shadow: -1px 1px 14px 0px rgba(150, 150, 150, 0.75);
+    height: 400px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.cream-image .image-price, .modal-price{
+    color: orange;
+}
+.cream-image:hover{
+    opacity: 0.7;
+}
+.cream-image img{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+        
+}
+
+.cream-image p{
+    text-align: center;
+    margin-top: 50%x;
+    
+}

@@ -1,0 +1,21 @@
+.upper-right-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-list{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-list li{
+    margin-left: 15px;
+    list-style-type: none;
+}
+.header-list a{
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
