@@ -1,0 +1,57 @@
+.lower-right-nav{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.lower-header{
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.lower-header i{
+    margin: auto;
+}
+.lower-right-nav form, .search{
+    width: 90%;
+}
+
+.search{
+    height: 40px;
+    border: 0px;
+    border-radius: 4px;
+    margin-right: 20px;
+    
+}
+.cart-button{
+    color: rgba(255, 255, 255, 1);
+    background: rgb(107, 109, 235);
+    align-items: center;
+    overflow: hidden;
+    border: 0px;
+    border-radius: 4px;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.number{
+    background: rgb(71, 73, 182);
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cart-button{
+    text-decoration: none;
+}
+.cart-button .fa-shopping-cart{
+    margin-left: 5px;
+}

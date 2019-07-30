@@ -1,0 +1,46 @@
+.more-creams-lower-span{
+    color: rgba(99, 100, 216, 1);
+}
+
+.more-creams-upper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cream-showing{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.cream-bar{
+    margin-left: 10px;
+}
+.cream-bar-text{
+    margin-top: 6px;
+}
+
+.cream-bar-button{
+    background:  rgba(255, 255, 255, 1);
+    box-shadow: none;
+    border: 1px solid  rgb(167, 166, 166);;
+    border-radius: 4px;
+    width: 25px;
+}
+.more-creams-lower{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.brand{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+.brand p, .brand span, .popularity p, .popularity span{
+    font-size: 12px;
+}

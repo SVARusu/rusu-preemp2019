@@ -1,0 +1,15 @@
+.content{
+
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.left-content{
+    width: 25%;
+}
+.right-content{
+    width: 75%;
+}
