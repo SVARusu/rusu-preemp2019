@@ -39,18 +39,18 @@ class LeftContent extends React.Component{
         this.state = {
             categories:{
                 FACE: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"],
-                BODY: [""],
-                FOOT: [""],
-                HANDS: [""],
-                HAIR: [""],
-                MAKEUP: [""]
+                BODY: ["Creams & Gels", "more", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"],
+                FOOT: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"],
+                HANDS: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"],
+                HAIR: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"],
+                MAKEUP: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"]
             }
         }
     }
     render(){
         return (
           
-                <Categories categories={this.state.categories}/>
+                <Categories categories={this.state.categories} />
                
            
             

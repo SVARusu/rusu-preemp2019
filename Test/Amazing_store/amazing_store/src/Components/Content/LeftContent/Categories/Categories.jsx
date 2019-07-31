@@ -1,54 +1,100 @@
 import React from 'react'
+import Component from './Component'
 
-
-const Categories = (props) =>{
-    // return(
-    //     <div id="side-menu">
-    //         <ul>
-    //             <li className="list-button"><h5>All categories</h5></li>
-    //             <li /* onclick="myFunction()" */ className="list-button">FACE</li>
-    //             <ul id="myDIV">
-    //                 <li className="list-item active">Creams & Gel</li>
-    //                 <li className="list-item">Patches</li>
-    //                 <li className="list-item">Emulsions</li>
-    //                 <li className="list-item">Toners</li>
-    //                 <li className="list-item">Face cleansing</li>
-    //                 <li className="list-item">Makeup removal</li>
-    //                 <li className="list-item">Scrubs</li>
-    //                 <li className="list-item">Peeling</li>
-    //                 <li className="list-item">Masks</li>
-    //             </ul>
-    //             <li className="list-button">BODY</li>
-    //             <li className="list-button">FOOT</li>
-    //             <li className="list-button">HANDS</li>
-    //             <li className="list-button">HAIR</li>
-    //             <li className="list-button">MAKEUP</li>
-    //         </ul>
-
-    //         <div className="side-cream">
-    //             <img src={"images/1.jpg"} alt="" />
-    //         </div>
-    //     </div>
-    // )
-    const categories = (Object.keys(props.categories));
-    return (
-        <div id="side-menu">
-            <div>
-                <h5 className="list-button">All categories</h5>
-                {
-                    categories.map((category, index) => {
-                        return <button className="list-button" key={index}>{category}</button>
-                    })
-                }
-            </div>
-            <div className="side-cream">
+class Categories extends React.Component {
+  
+  
+    constructor(props){
+      super(props);
+      this.state= {isVisible: null}
+      this.press = this.press.bind(this);
+      
+    }
+  
+    press(categ)  {
+      this.setState({isVisible: this.state.isVisible === categ ? null : categ }
+        
+        );
+    }
+    
+  
+       
+      
+      render() { 
+        const categories = Object.keys(this.props.categories);
+        return(
+            <div id="side-menu"> 
+                <div className="toggle-menu">                        
+                    <h5 className="list-button">All categories</h5>
+                    {categories.map((category, index) =>
+                        <Component extend={this.state.isVisible} press={this.press}cat = {category} categories={this.props.categories[category]} key={index}/>
+                                    
+                    )} 
+                </div>
+                <div className="side-cream">
                     <img src={"images/1.jpg"} alt="" />
+                </div>
             </div>
-        </div>
-           
+      ) }
+  
+  
+  }
+
+
+// const Categories = (props) => {
+//     const categories = Object.keys(props.categories);
+    
+//     return (
+//         <div id="side-menu"> 
+//             <div>                        
+//                  <h5 className="list-button">All categories</h5>
         
-        
-    )
-}
+//                     {categories.map((category, index) =>
+//                     <Component cat = {category} categories={props.categories[category]} key={index}/>
+                       
+//                     )} 
+//         </div>
+//       </div>
+//     )
+
+
+// }
+
+
+
+// class Categories extends React.Component{
+//     constructor(props){
+//         super(props)
+//         this.state = { show: false }
+//         this.press = this.press.bind(this);
+//     }
+//     press() {
+//         this.setState({show: !this.state.show})
+//     }
+    
+//     render(){
+//         const categories = (Object.keys(this.props.categories));
+//         const cat = (this.props.categories);
+//             return (
+//                 <div id="side-menu">
+//                     <div>
+//                         <h5 className="list-button">All categories</h5>
+//                         {   
+                            
+//                             categories.map((category, index) => 
+//                                 //<Component key={index} category={category}  cat={cat} press={this.press} isVisible={this.state.show}/>
+//                                 <Component key={index} category={category}  cat={cat} press={this.press} isVisible={this.state.show}/>
+//                             )
+//                         }
+//                     </div>
+//                     <div className="side-cream">
+//                             <img src={"images/1.jpg"} alt="" />
+//                     </div>
+//                 </div>
+//             )
+//     }
+   
+
+// }
 
 export default Categories
