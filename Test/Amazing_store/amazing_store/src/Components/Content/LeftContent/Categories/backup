@@ -1,0 +1,46 @@
+const Categories = (props) =>{
+    const categories = (Object.keys(props.categories));
+    const cat = (props.categories);
+
+    //console.log(Object.values(cat)[1])
+    return (
+        <div id="side-menu">
+            <div>
+                <h5 className="list-button">All categories</h5>
+                {   
+                    
+                    categories.map((category, index) => {
+                        console.log(cat[category])
+                        // let l = Object.values(cat)[index].length;
+                        // let itemList = [];
+                        // for(let i = 0; i < l; i++){
+                        //     itemList.push(Object.values(cat)[index][i])
+                        //     console.log(Object.values(cat)[index][i])
+                        // }
+                        
+                       
+                        return (
+                        <div>
+                            <button onClick={() => {press(cat, index)}} className="list-button" key={index}>{category}</button>
+                            
+                                <ul>
+                                    {
+                                    cat[category].map(entry => <li className="list-item">{entry}</li>
+                                    )
+                                    }
+                                </ul>
+                                
+                            
+                        </div>
+                        )
+                       
+                    })
+                }
+            </div>
+            <div className="side-cream">
+                    <img src={"images/1.jpg"} alt="" />
+            </div>
+        </div>
+    )
+    
+}
