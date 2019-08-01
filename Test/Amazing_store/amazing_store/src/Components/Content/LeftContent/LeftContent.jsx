@@ -43,7 +43,8 @@ class LeftContent extends React.Component{
                 FOOT: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"],
                 HANDS: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"],
                 HAIR: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"],
-                MAKEUP: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"]
+                MAKEUP: ["Creams & Gels", "Patches", "Emulsions", "Toners", "Face cleansing", "Makeup removal", "Scrubs", "Peeling", "Masks"],
+                
             }
         }
     }
