@@ -1,16 +1,22 @@
 const express = require('express');
+const fs = require('fs')
 const app = express();
-const http = require('http');
+const https = require('https');
 const userRouter = require('./routes/users');
-const server = http.createServer(app);
 const bodyParser = require('body-parser')
+//const {errorHandler} = require('./middleware/errorHandler');
 
-
+//app.use(errorHandler);
 app.use('/', userRouter)
 app.use(express.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-server.listen(5000, 'localhost')
+
+const server = https.createServer({
+    key: fs.readFileSync('server.key'),
+    cert: fs.readFileSync('server.cert')
+}, app);
+server.listen(5000)
 
 // module.exports = router;
-// module.exports = app;
+module.exports = app;
