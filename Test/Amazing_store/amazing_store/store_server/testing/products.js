@@ -25,13 +25,41 @@ describe('GET /products/:id', function() {
     });
 });
 
-describe('GET /products/?category={id}manufacturer={id}', function() {
-    it('responds with json', function(done) {
+// describe('GET /products/?category={id}manufacturer={id}', function() {
+//     it('responds with json', function(done) {
+//         request(app)
+//         .get('/products/?category=2&manufacturer=2')
+//         .set('Accept', 'application/json')
+//         .expect('Content-Type', /json/)
+//         .expect(200, done);
+//     });
+// });
+
+describe('POST /products', function() {
+    it('responds with json', function() {
         request(app)
-        .get('/products/?category=2&manufacturer=2')
+        .post('/products')
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
-        .expect(200, done);
+        .expect(200);
     });
 });
 
+describe('DELETE /products/:id', function() {
+    it('responds with json', function() {
+        request(app)
+        .post('/products/3')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200);
+    });
+});
+describe('PUT /products/:id', function() {
+    it('responds with json', function() {
+        request(app)
+        .post('/products/3')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200);
+    });
+});

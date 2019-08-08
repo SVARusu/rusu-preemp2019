@@ -1,4 +1,4 @@
-const allProducts = require('../products/products.json')
+const allProducts = require('../products/images.json')
 const getProductsById = (req, res) =>{
     console.log(req.params.id)
     let id = parseInt(req.params.id);
