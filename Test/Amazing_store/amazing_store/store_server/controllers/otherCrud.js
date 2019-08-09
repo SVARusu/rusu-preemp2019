@@ -64,7 +64,7 @@ const deleteProduct = (req, res) => {
         
     
     }); */
-    debugger;
+    //debugger;
     readfile()
             .then((data) => {
                 let currentProds = JSON.parse(data);
@@ -106,8 +106,30 @@ function writefile(finalList){
 }
 
 const updateProduct = (req, res) => {
-    fs.readFile(path.join(__dirname, '../products/images.json'), function(err, data){
-        if(err) console.log(err);
+    // fs.readFile(path.join(__dirname, '../products/images.json'), function(err, data){
+    //     if(err) console.log(err);
+    //     let currentProds = JSON.parse(data);
+    //     //console.log(req.body.location);
+    //     let id = parseInt(req.params.id);
+    //     currentProds.forEach(element => {
+    //         //console.log(element.id === parseInt(req.params.id));
+    //         if(element.id === id){
+    //             //console.log(element.location);
+    //             element.location = req.body.location;
+    //             element.title = req.body.title;
+    //             element.price = req.body.price;
+    //             //console.log(element.location);
+    //         }
+    //     });
+    //     console.log(currentProds);
+    //     const finalList = JSON.stringify(currentProds);
+    //     fs.writeFile(path.join(__dirname, '../products/images.json'), finalList,  function(err){
+    //         if(err) throw err;
+    //     });
+
+    // })
+    asyncRead().then((data) => {
+        //console.log(data);
         let currentProds = JSON.parse(data);
         //console.log(req.body.location);
         let id = parseInt(req.params.id);
@@ -121,13 +143,35 @@ const updateProduct = (req, res) => {
                 //console.log(element.location);
             }
         });
-        console.log(currentProds);
+        //console.log(currentProds);
         const finalList = JSON.stringify(currentProds);
-        fs.writeFile(path.join(__dirname, '../products/images.json'), finalList,  function(err){
-            if(err) throw err;
-        });
+        return finalList;
+        })
+        .then(asyncWrite)
+        .catch(err => {
+                    console.log(err)
+                })
+        .then(() => res.status(204).json({}))
+}
 
-    })
+async function asyncRead() {
+    try{
+         return await readfile();
+    }catch(error){
+        console.log(error);
+        
+    }
+}
+
+async function asyncWrite(finalList){
+    try{
+        console.log("final list:" + finalList);
+        
+        await writefile(finalList);
+    }catch(error){
+        console.log(error);
+    
+}
 }
 
 module.exports = {createProduct, deleteProduct, updateProduct};
